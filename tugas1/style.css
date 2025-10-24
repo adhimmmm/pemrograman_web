@@ -773,6 +773,15 @@ footer {
     padding: 2.5rem;
 }
 
+/* Tambahan untuk menampilkan pesan error dengan warna berbeda */
+.success-msg.success-msg-error {
+    background: #fee2e2;
+    /* Merah muda */
+    color: #991b1b;
+    /* Merah gelap */
+    border: 1px solid #f87171;
+}
+
 
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
