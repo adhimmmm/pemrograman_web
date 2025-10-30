@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutsalArena - Profil Perusahaan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full bg-white shadow-md z-50 transition">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-green-600">FutsalArena</h1>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex space-x-6 font-medium">
+          <a href="#home" class="text-gray-700 hover:text-green-600">Beranda</a>
+          <a href="#about" class="text-gray-700 hover:text-green-600">Tentang</a>
+          <a href="#programs" class="text-gray-700 hover:text-green-600">Program</a>
+          <a href="#events" class="text-gray-700 hover:text-green-600">Acara</a>
+          <a href="#gallery" class="text-gray-700 hover:text-green-600">Galeri</a>
+          <a href="#partners" class="text-gray-700 hover:text-green-600">Mitra</a>
+          <a href="#contact" class="text-gray-700 hover:text-green-600">Kontak</a>
+        </nav>
+
+        <a href="#contact" class="hidden lg:block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">Gabung Sekarang</a>
+
+        <!-- Tombol Hamburger -->
+        <button id="menu-btn" class="lg:hidden text-gray-700 z-50 relative">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Overlay -->
+    <div id="mobile-overlay" class="hidden fixed inset-0 bg-black/50 z-40"></div>
+
+    <!-- Mobile Menu (Slide dari kanan setengah layar) -->
+    <div id="mobile-menu" class="hidden fixed top-0 right-0 w-2/3 sm:w-1/2 h-full bg-white shadow-lg z-50 transform translate-x-full transition-transform duration-300">
+      <nav class="flex flex-col px-6 py-6 gap-6 mt-14 text-left">
+        <a href="#home" class="py-2 text-gray-700 hover:text-green-600">Beranda</a>
+        <a href="#about" class="py-2 text-gray-700 hover:text-green-600">Tentang</a>
+        <a href="#programs" class="py-2 text-gray-700 hover:text-green-600">Program</a>
+        <a href="#events" class="py-2 text-gray-700 hover:text-green-600">Acara</a>
+        <a href="#gallery" class="py-2 text-gray-700 hover:text-green-600">Galeri</a>
+        <a href="#partners" class="py-2 text-gray-700 hover:text-green-600">Mitra</a>
+        <a href="#contact" class="py-2 text-gray-700 hover:text-green-600">Kontak</a>
+      </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="h-screen bg-cover bg-center flex items-center justify-center relative" style="background-image: url(./img/hero_section/hero.jpg)">
+      <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50"></div>
+      <div class="relative z-10 text-center text-white px-6 max-w-3xl md:max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Selamat Datang di FutsalArena</h2>
+        <p class="text-base md:text-lg lg:text-xl mb-8">Tempat di mana semangat dan permainan bertemu. Bermain. Berlatih. Bertanding.</p>
+        <a href="#programs" class="inline-block bg-green-600 px-6 md:px-8 py-3 rounded-lg text-base md:text-lg font-semibold hover:bg-green-700 transition">Jelajahi Program</a>
+      </div>
+      <div class="absolute bottom-6 animate-bounce text-white text-sm">Scroll ke bawah ↓</div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+        <img src="./img/image/6.jpg" alt="Tentang FutsalArena" class="rounded-xl shadow-lg w-full h-72 md:h-80 object-cover object-center mx-auto" />
+        <div>
+          <h3 class="text-3xl md:text-4xl font-bold mb-6">Tentang Kami</h3>
+          <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-4">
+            FutsalArena adalah pusat futsal modern yang didedikasikan untuk mendukung para pemain dari semua kalangan. Kami hadir dengan fasilitas terbaik, pelatih berpengalaman, dan komunitas solid.
+          </p>
+          <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+            Misi kami adalah membangun ekosistem futsal yang sehat, kompetitif, sekaligus menyenangkan, agar setiap orang dapat berkembang menjadi pemain dan pribadi yang lebih baik.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program -->
+    <section id="programs" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">Program Latihan</h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <img src="./img/image/1.jpg" alt="Pemula" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-3">Latihan Pemula</h4>
+              <p class="text-gray-600 mb-4">Belajar dasar futsal bersama pelatih profesional.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <img src="./img/image/2.jpg" alt="Lanjutan" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-3">Keterampilan Lanjutan</h4>
+              <p class="text-gray-600 mb-4">Tingkatkan teknik, taktik, dan kerjasama tim ke level berikutnya.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <img src="./img/image/3.jpg" alt="Kamp Profesional" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-3">Kamp Profesional</h4>
+              <p class="text-gray-600 mb-4">Program intensif eksklusif untuk pemain elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Acara -->
+    <section id="events" class="py-20 bg-white">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">Acara & Komunitas</h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <img src="./img/image/4.jpg" alt="Pertandingan" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-3">Pertandingan</h4>
+              <p class="text-gray-600">Nikmati pertandingan seru setiap akhir pekan.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <img src="./img/image/5.jpg" alt="Workshop" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-3">Workshop</h4>
+              <p class="text-gray-600">Belajar langsung dari pelatih dan pemain futsal profesional.</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+            <img src="./img/image/7.jpg" alt="Turnamen" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-3">Turnamen</h4>
+              <p class="text-gray-600">Ikuti turnamen tahunan dengan hadiah menarik dan eksposur besar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="gallery" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">Galeri</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <img src="./img/image/11.jpg" alt="Galeri 1" class="rounded-lg shadow-lg hover:scale-105 transition" />
+          <img src="./img/image/11.jpg" alt="Galeri 2" class="rounded-lg shadow-lg hover:scale-105 transition" />
+          <img src="./img/image/11.jpg" alt="Galeri 3" class="rounded-lg shadow-lg hover:scale-105 transition" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Mitra -->
+    <section id="partners" class="py-20 bg-white">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">Mitra Kami</h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center h-32">
+            <img src="./img/partners/federassi.png" alt="Mitra 1" class="max-h-20 w-auto grayscale hover:grayscale-0 transition" />
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center h-32">
+            <img src="./img/partners/ortuseight.png" alt="Mitra 2" class="max-h-20 w-auto grayscale hover:grayscale-0 transition" />
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center h-32">
+            <img src="./img/partners/ortuseight2.png" alt="Mitra 3" class="max-h-20 w-auto grayscale hover:grayscale-0 transition" />
+          </div>
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center h-32">
+            <img src="./img/partners/federassi.png" alt="Mitra 4" class="max-h-20 w-auto grayscale hover:grayscale-0 transition" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20">
+        <h3 class="text-3xl md:text-4xl font-bold text-center mb-12">Hubungi Kami</h3>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          <!-- Info Kontak -->
+          <div>
+            <p class="text-gray-600 mb-6">Kami siap membantu! Hubungi kami untuk pemesanan lapangan, acara, atau informasi lainnya.</p>
+
+            <div class="space-y-4">
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-green-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <div>
+                  <h4 class="font-bold">Alamat</h4>
+                  <p class="text-gray-600">Jl. Futsal No.10, Jakarta</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-green-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <div>
+                  <h4 class="font-bold">Telepon</h4>
+                  <p class="text-gray-600">+62 812 3456 7890</p>
+                </div>
+              </div>
+
+              <div class="flex items-start space-x-3">
+                <svg class="w-6 h-6 text-green-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <div>
+                  <h4 class="font-bold">Email</h4>
+                  <p class="text-gray-600">info@futsalarena.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Kontak -->
+          <form class="bg-white p-8 rounded-xl shadow-lg space-y-6">
+            <input type="text" placeholder="Nama Lengkap" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 outline-none" />
+            <input type="email" placeholder="Email" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 outline-none" />
+            <textarea placeholder="Pesan" rows="4" class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 outline-none"></textarea>
+            <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-600 text-white py-6 text-center">
+      <p>© 2025 FutsalArena. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const overlay = document.getElementById("mobile-overlay");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        overlay.classList.toggle("hidden");
+        mobileMenu.classList.toggle("translate-x-0");
+      });
+
+      overlay.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+        overlay.classList.add("hidden");
+        mobileMenu.classList.remove("translate-x-0");
+      });
+
+      // Tutup menu ketika klik link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          overlay.classList.add("hidden");
+          mobileMenu.classList.remove("translate-x-0");
+        });
+      });
+    </script>
+  </body>
+</html>
