@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FutsalArena - Blog & Berita</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+    html {
+        scroll-behavior: smooth;
+        /* Tambahkan ini untuk memastikan html dan body mengambil tinggi penuh */
+        height: 100%; 
+    }
+    body {
+        /* Gunakan Flexbox untuk mengatur layout vertikal */
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Memastikan body setidaknya setinggi viewport */
+        margin: 0;
+        padding: 0;
+    }
+    /* Konten utama (section) harus mengambil ruang sisa yang tersedia */
+    #blog {
+        flex: 1; 
+        padding-top: 80px;
+    }
+</style>
+  </head>
+  <body class="bg-gray-50">
+    <header class="fixed top-0 w-full bg-white shadow-md z-50 transition">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-green-600">FutsalArena</h1>
+
+        <nav class="hidden lg:flex space-x-6 font-medium">
+          <a href="index.html#home" class="text-gray-700 hover:text-green-600">Beranda</a>
+          <a href="index.html#about" class="text-gray-700 hover:text-green-600">Tentang</a>
+          <a href="index.html#programs" class="text-gray-700 hover:text-green-600">Program</a>
+          <a href="index.html#events" class="text-gray-700 hover:text-green-600">Acara</a>
+          <a href="index.html#gallery" class="text-gray-700 hover:text-green-600">Galeri</a>
+          <a href="index.html#partners" class="text-gray-700 hover:text-green-600">Mitra</a>
+          <a href="blog.html" class="text-green-600 font-bold border-b-2 border-green-600">Blog</a>
+        </nav>
+
+        <a href="index.html#contact" class="hidden lg:block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700">Gabung Sekarang</a>
+
+        </div>
+    </header>
+
+    <section id="blog" class="py-30 content-padding">
+      <div class="container mx-auto px-6 md:px-10 lg:px-20">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-4">Berita Terbaru Olahraga</h2>
+        <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+          Ikuti perkembangan terkini dari berita olahraga, analisis pertandingan, dan kisah inspiratif komunitas kami.
+        </p>
+
+        <div id="news-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <div class="bg-white rounded-xl shadow-lg p-6 animate-pulse" id="loading-state">
+            <div class="h-48 bg-gray-200 rounded-lg mb-4"></div>
+            <div class="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
+            <div class="h-4 bg-gray-200 rounded w-1/2 mb-4"></div>
+            <div class="h-4 bg-gray-200 rounded mb-2"></div>
+            <div class="h-4 bg-gray-200 rounded w-5/6"></div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <button id="load-more-btn" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition hidden">
+                Muat Lebih Banyak Berita
+            </button>
+        </div>
+
+        <p id="error-message" class="text-center text-red-500 font-semibold mt-12 hidden">Gagal memuat berita. Silakan coba lagi nanti.</p>
+        
+      </div>
+    </section>
+
+    <footer class="bg-green-600 text-white py-6 text-center">
+      <p>© 2025 FutsalArena. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <script src="api.js"></script>
+  </body>
+</html>
