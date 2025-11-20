@@ -6,7 +6,7 @@
       'x-rapidapi-host': 'live-football-api.p.rapidapi.com'
     };
 
-    // Deklarasi fungsi ASYNC
+    // Deklarasi fungsi asyn
     async function fetchNews() { 
       const newsContainer = $('#news-container');
       const errorMessage = $('#error-message');
@@ -14,9 +14,9 @@
       // Tampilkan loading state
       newsContainer.html(
         `<div class="bg-white rounded-xl shadow-lg p-6 animate-pulse col-span-full" id="loading-state">
-           <div class="h-48 bg-gray-200 rounded-lg mb-4"></div>
-           <div class="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
-         </div>`
+          <div class="h-48 bg-gray-200 rounded-lg mb-4"></div>
+          <div class="h-6 bg-gray-300 rounded w-3/4 mb-2"></div>
+        </div>`
       );
       errorMessage.hide();
       $('#load-more-btn').hide();
@@ -55,7 +55,6 @@
         
         if (newsData.length > 0) {
           newsData.forEach(item => {
-            // Mapping properti data
 
             // title
             const title = item.title || 'Judul Tidak Diketahui';
@@ -71,7 +70,7 @@
                 const [datePart, timePart] = item.published_at.split(' ');
                 const dateParts = datePart.split('-'); 
                 const safeDateFormat = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]} ${timePart}`; 
-
+                //menggabungkan kembali format tanggal
                 publishedAt = new Date(safeDateFormat).toLocaleDateString('id-ID', { 
                     year: 'numeric', 
                     month: 'long', 
